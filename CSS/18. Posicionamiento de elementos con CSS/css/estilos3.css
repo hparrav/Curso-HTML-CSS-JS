@@ -1,0 +1,25 @@
+h1{
+    text-align: center;
+    color: crimson;
+}
+div.contenedor{
+    width: 30%;
+    height: 100px;
+    overflow: auto;
+}
+div.contenedor.flotado{
+    float: left; /* con la clase flotado, se esta definiendo que los elementos se floten a la izquierda */
+}
+div.contenedor.flotado.contenedor1{
+    border: 3px dashed greenyellow;
+}
+div.contenedor.flotado.contenedor2{
+    border: 3px dashed cornflowerblue;
+    float: right; /* en la clase contenedor2 se esta reescribiendo el atributo de flotado, definiendolo ahora hacia la derecha */
+}
+div.contenedor.contenedor3{
+    clear: both; /* con la clase contenedor3 se esta limpiando los elementos de flotado definidos previamente, ya sea de left, righta o both, haciendo que ya el div no tenga definido ningun flotado */
+    border: 3px dashed darkorange;
+    margin: auto;/*  se centra el elemento */
+}
+

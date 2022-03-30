@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento</title>
+    <link rel="stylesheet" href="/CSS/18. Posicionamiento de elementos con CSS/css/estilos.css">
+</head>
+<body>
+    <h2>Centrar elementos de tipo DIV</h2>
+    <div class="primero1">Elemento de tipo div</div>
+    <div class="primero2">Elemento de tipo div</div>
+    <br/>
+    <!-- Los elementos que tengan posición static se consideran como elementos no posicionados, el resto son elementos posicionados -->
+    <h2>Posicionamiento de tipo static</h2>
+    <div class="static">Elemento de tipo div, con posicionamiento static</div>
+    <br/>
+    <h2>Posicionamiento de tipo sticky</h2>
+    <div class="sticky">Elemento de tipo div, con posicionamiento sticky</div>
+    <br/>
+    <h2>Posicionamiento de tipo relativo</h2>
+    <div class="relativa">Elemento de tipo div, con posicionamiento relativo</div>
+    <p>Este párrafo respeta el espacio natural definido para elemento div, aún cuando este se desplace</p>
+    <br/>
+    <h2>Posicionamiento de tipo fixed</h2>
+    <div class="fixed">Elemento de tipo div, con posicionamiento fixed</div> <!-- Ya que es un elemento que queda siempre fijo, se puede utilizar como para un chat que sin importar que con el scrol se baje, siempre va a estaren la misma posición -->
+    <p>Este párrafo toma el espacio natural definido para elemento div, sin importar cuanto se desplace el div</p>
+    <br/>
+    <div class="padre" style="position: relative;"> <!-- para poder usar un div con posición absoluta dentro de un div padre, el div padre debe tener el atributo de posición relativa -->
+        Div padre
+        <div class="absoluta">Elemento de tipo div, con posicionamiento absoluta</div>
+    </div>
+    <br/><br/>
+    <h2>Z index</h2>
+    <br/>
+
+    <!-- El valor z-index nos permite posicionar elementos sbore otros dandoles un orden en el eje z, entre mayor sea el numero primero de mostrara el elemento, tambien recibe numero negativos -->
+    <div class="ZinStatic">Elemento div no posicionado (static)</div>
+    <div class="ZinRelative">
+        Elemento div posicionado (relative)
+        <div class="ZinAbsolute">Elemento div posicionado (absolute)</div>
+    </div>
+
+
+</body>
+</html>

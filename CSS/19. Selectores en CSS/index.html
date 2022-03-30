@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores en CSS</title>
+    <link rel="stylesheet" href="/CSS/19. Selectores en CSS/css/estilos.css">
+</head>
+<body>
+    <h1>Selectores combinados en CSS</h1>
+
+    <div class="contenedor descendente"> <!-- el selector a nivel descendente, selecciona todos los elemento del mismo tipo dentro del elemento referenciado, independiente si estos estan dentro de otros que esten dentro del mimo div -->
+        Selectores descendientes (en cualquier nivel interno del elemento selccionado)
+        <p>Primer reglón</p> <!-- elemento parrafo interno a primer nivel del div -->
+        <p>Segundo reglón</p>
+        <section>
+            <p>Tercer reglón</p> <!-- Elemento parrafo interno a segundo nivel del div -->
+        </section>
+    </div>
+    <br/>
+    <div class="contenedor hijo"> <!-- solo selecciona los elementos que son hijos directos del div, no los desendientes del hijo o elementos que esta a un segundo nivel de creacion -->
+        Selectores Hijo (child)
+        <p>Primer reglón</p> <!-- elemento hios directos -->
+        <p>Segundo reglón</p>
+        <section>
+            <p>Tercer reglón</p> <!-- Elementos descendientes de un hijo -->
+        </section>
+    </div>
+    <br>
+    <div class="contenedor adyacente"> <!-- el estilo que se referencia en su clase, no es aplicado a este elemnto si no al elemento adyacente(siguiente) -->
+        Selectores adyacente (siguiente al elemento en referencia)
+        <p>Primer reglón</p> 
+    </div>
+    <p>Reglón adyacente</p>
+    <p>Tercer adyacente</p>
+
+    <div class="contenedor hermano"> <!--igual que el adyacente, pero este no selecciona solo el siguiente elemneto al div que tiene la clse, si no que selecciona todos los elementos hermanos despues del div con la clase -->
+        Selectores Sibling  (seleccionando todos los hermanos posteriores al div con la clase)
+        <p>Primer reglón</p> 
+    </div>
+    <p>Reglón adyacente</p>
+    <p>Tercer adyacente</p>
+    <p>Cuarto adyacente</p>
+    
+</body>
+</html>

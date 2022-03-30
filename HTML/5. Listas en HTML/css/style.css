@@ -1,0 +1,17 @@
+ol{
+    list-style: none;/* sin estilo de lista */
+    counter-reset: cont;/* (2) Dentro de la lista se debe inciar y reiniciar la variable de contador */
+}
+
+ol li{
+    counter-increment: cont;/* (3)por cada elemento de lista se ira incrementando el valor del contador */
+}
+ol li::before{ /* :: es un selector y acompañado de la palabra "before", indicamos que se agregara un texto antes del elemento de la lista */
+    content: "( Curso " counter(cont) ") "; /* (1) con la función counter, genaramos un contador y lo asignamos a la varible que se ponga entre parentesis(La cual ira almacenando el valor del conteo) */
+    color:darkviolet;
+}
+
+ol li::after{ /* :: es un selector y acompañado de la palabra "after", indicamos que se agregara un texto despues del elemento de la lista */
+    content: ".";
+
+}

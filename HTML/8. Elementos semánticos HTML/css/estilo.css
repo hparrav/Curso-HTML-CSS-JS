@@ -1,0 +1,45 @@
+header{
+    color: #f72585;
+    text-align: center;
+    font-size: 20px;
+}
+nav{
+    width: 20%; /* ocupa un ancjo del 20% del espacio disponible */
+    float: left; /* flotar el elemento a la izquierda */
+}
+nav a{
+    background-color: #f71570;
+    border-radius: 10px 0 10px 0; /* borde redondeado en la parte superior-izquierda e inferior-derecha */
+    color: #fff;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none; /* no se subraya el texto */
+    display: block; /* ya que los elementos de tipo ancla son in-line, con este metodo los convertimos en bloque para que no se superpongan unos con otros */
+
+}
+section{
+    float: right; /* flotamos las secciones a la derecha */
+    width: 75%; /* ocupa un ancho del 70% del espacio disponible */
+    color: #7209b7;
+    border-radius: 5px;
+    box-shadow: 1px 0 4px rgb(0,0,0,.2); /* agregar una sombra al rededor del elemento HTML */
+    margin-bottom: 15px;
+    padding: 15px;
+}
+aside{
+    float:right;/* flotamos la etiqueta de aside3, hacia la derecha */
+    width: 30%;
+    padding: 5px;
+    margin: 5px;
+    font-style: italic;
+    color: #4361ee;
+    box-shadow: inset 5px 0 5px -5px #4895ef; /*  en este boxshadow donde se pondra la sobra de lado interno, esto se logra con inset */
+}
+footer{
+    clear: both; /* rompe con los elementos flotados y se posiciona en la siguiente linea */
+    padding: 1px;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+}

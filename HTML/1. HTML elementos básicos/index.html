@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos básicos de HTML</title>
+</head>
+<body style="background-color: rgb(195, 193, 183);">
+    <h1 style="color: blue; background-color: blueviolet;font-size: 60px;font-family: C ourier;" >Título en h1</h1>
+    <h2>Título en h2</h2> <!-- entre mas grande el número del h, mas pequeño el tamaño del texto -->
+    <h3>Título en h3</h3><!-- Automaticamente el h, agrega un salto de linea -->
+    <h6>Título en h6</h6><!-- las cabeceras se reconoce hasta el h6 -->
+
+    <p>Aquí se escribe texto</p><!-- La etiqueta de párrafo nos permite agregar texto -->
+    <p>Primera línea <br/>segunda línea</p><!-- con el br se realiza un salto de linea -->
+    
+    <hr><!-- Con hr creamos una linea divisioria -->
+    
+    <!-- Para los links utilizamos la etiqueta a
+    -El atributo de href nos permite indicar la pagina a la que nos vamos a direcionar
+    -El atributo de target="-blank"  hacemos que el enlace se abra en una nueva pestaña-->
+  
+    <a href="https://www.google.com/" target="_blank">Página de Google</a>
+     <br>
+    <!--Para ir a una página dentro del mismo proyecto -->
+    <a href="pagina1.html">Ir a página 1</a>
+
+    <!-- Para agregar imagenes lo hacemos a traves de la etiqueta img la cual va acompañada de un scr el cual nos indica el origen de la imagen -->
+    <!-- para agregar una imagen de manera local -->
+    <img src="imagenes/html5.png" alt="Logo HTML">
+    <!-- Para agregar una imagen alojada en un servidor -->
+    <img src="https://tecnologiaenvivo.com/wp-content/uploads/2013/12/logo_CSS3-1.png" alt="Logo CCS" width="100px">
+    <!-- Cuando un enlace esta mal, se visualizara una imagen de un archivo roto
+    pero usando texto alternativo alt="" podemos mostrar un texto cuando el enlace este roto -->
+    <img src="https//noexiste.com/ok" alt="Javascript">
+    <!-- con las propiedades width y height podemos modificar el tamaño de la imagen -->
+    <!-- El title es un atributo que permite mostrar un texto cuando se pasa el cursor por enciam de la imagen, a diferencia del alt se muestra en todo
+    momento y no solo cuando hay algun problema con la imagen -->
+    <img src="imagenes/javascript.png" alt="logo JS" width="50px" height="50px" title="Logo de JavaScript">
+    <!-- El title se puede agregar a cualquier elemento de HTML -->
+    <!-- style es un atributo que permite modificar el fondo, el color de fuente, el tipo de fuente,el tamaño de la fuente,entre otros... -->
+    <p title="Esto es un parrafo" style="color: brown ;"> Un parrafo que tiene como atributo un title</p>
+
+    <!-- El pre (Preformater) es un elemnto que permite mostrar texto el cual se presenta y respesta el salto de linea que tenga y la posición que se le da cuando se escribe -->
+    <pre style="font-size: 8px;" >
+        Esto
+    Es
+              Mucho texto    
+
+    <!-- Formatos de texto en HTML, que permiten darle un estilo y un sentido al texto -->
+    <pre>
+        <b>Texto en negrilla</b> <!-- presenta el texto en negrilla -->
+        <strong>Texto importante</strong> <!-- Visualmente se ve igual que la negrilla, pero a nivel semántico le da una importancia a este texto -->
+        <i>Texto en italica</i> <!-- presenta el texto en italica -->
+        <em>Texto para enfatizar</em><!-- Visualmente igual que la italica, pero se utiliza para enfatizar un texto -->
+        <small>Texto pequeño</small> <!-- presenta el texto en un tamaño mas pequeño -->
+        <mark>Texto resaltado</mark> <!-- Muestra el texto resaltado -->
+        <del>Texto tachado</del> <!-- presenta un texto con una raya al medio o eliminado -->
+        <ins>Texto insertado</ins><!-- muestra un texto con una rara en la base, indicando que es un texto insertado -->
+        Texto con sub<sub>i</sub>ndice H<sub>2</sub>O <!-- Muestra texto en subindice -->
+        Texto con super<sup>i</sup>ndice x<sup>2</sup> <!-- Muestra texto en superindice -->
+        <code>Texto en formato código</code> <!-- presenta el texto con fuente y formato tipo código -->
+    </pre>
+
+    <!-- Referencia de caracteres en HTML -->
+    <a href="https://dev.w3.org/html5/html-author/charref" title="Referencia de caracteres" target="-blank">Referencia de caracteres</a> <!-- Pagina para buscar codigos que hacen referencia de caracteres -->
+    <p>&excl; símbolo de exclamación</p> <!-- Simbolo de exclamación -->
+    <p>&#x00021; símbolo exclamación hexadecimal</p> <!-- Simbolo de exclamación -->
+    <p>&#33; símbolo exclamación decimal</p> <!-- Simbolo de exclamación -->
+    <p>&lt; símbolo menor que</p> <!-- Menor que -->
+    <p>&gt; símbolo mayor que</p> <!-- Mayor que -->
+    <p>&commat; símbolo arroba</p> <!-- símbolo de arroba -->
+    <p>&Aacute;rbol</p> <!-- letras con ascentos -->
+    <p>&oacute; &Oacute;</p> <!-- letras con ascentos -->
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;texto con espacio</p> <!-- Espacios -->
+        
+</body>
+</html>

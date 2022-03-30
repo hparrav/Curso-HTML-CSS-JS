@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iconos en CSS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> <!-- enlazamos con la url para boostrap icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"> <!-- Link para traer los iconos de google -->
+    <link rel="stylesheet" href="/CSS/16. iconos en CSS/css/estilos.css">
+</head>
+<body>
+    <h1>Iconos de Bootstrap</h1>
+    <div>
+        <p>
+            <i class="bi-alarm"></i><!-- el tipo de icono se define por la clase de la etiqueta i -->
+            Alarma
+        </p>
+    </div>
+    <div>
+        <p>
+            <i class="bi-alarm icono_azul"></i>
+            Alarma Azul
+        </p>
+    </div>
+    <div>
+        <p>
+            <i class="bi bi-arrow-right-circle-fill icono_rojo"></i>
+            Flecha roja
+        </p>
+    </div>
+    <div>
+        <p>
+            <i class="bi bi-person-circle icono_verde"></i>
+            Persona
+        </p>
+    </div>
+    <br/><br/>
+
+    <h1> <i class="material-icons">home</i> Iconos de Goole</h1> <!-- se pueen agregar iconos en el h1 -->
+    <div>
+        <p>
+            <i class="material-icons">search</i> <!-- la clase siempre sera "material-icons", y el tipo de icono se especifica en el valor de la etiqueta -->
+            Busqueda
+        </p>
+    </div>
+    <div>
+        <p>
+            <i class="material-icons" style="vertical-align: bottom;">done</i> <!-- se le puede dar estilo de igual manera, tanto acá como en el css, este estilo de vertical-aline permite ubicar posicionar el icono de manera que se vea mas centrado con el texto -->
+            done
+        </p>
+    </div>
+    <br/><br/>
+
+    <h1> <ion-icon name="home-outline"></ion-icon> Iconos de ionic (ionicons)</h1> <!-- se busca el icono deseado en la pagina de ionic y se copia y pega la estructura que allá nos indican -->
+    <div>
+        <p>
+            <ion-icon name="search-circle-outline" class="icono_rojo"></ion-icon> <!-- en todas estas formas de traer iconos, podemos aplicarle estilos mediante clases -->
+            Busqueda
+        </p>
+    </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> <!-- de esta manera se importan los icionos de ionics -->
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

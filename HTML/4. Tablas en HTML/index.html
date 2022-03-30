@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas en HTML</title>
+    <link rel="stylesheet" href="/4. Tablas en HTML/ccs/estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet"> <!-- importamos la fuente trocchi de Google Fonts -->
+
+</head>
+<body>
+
+    <table><!-- Con la etiqueta table podemos generar una tabla -->
+                    <!-- el atributo "border" permite darle un borde a la tabla -->
+
+        <caption>Listado de personas</caption><!-- Titulo de la tabla -->
+        <tr> <!-- con la etiqueta tr genramos una nueva fila -->
+            <th colspan="2">Nombre</th> <!-- la etiqueta th crea una cabecera -->
+            <!-- Podemos unir dos celdas de la cabecera con colspan indicando cuantas celdas o espacios va a tomar -->
+            <!-- <th>Apellido</th> -->
+            <th>Email</th>
+        </tr> 
+        <tr>
+            <td>Juan</td><!-- sirve para agregar datos en nuestra tabla -->
+            <td>Perez</td>
+            <td rowspan="2">jperez@mail.com</td> <!-- Une dos filas con el rowspan, indicandole el numero de filas que va a unir -->
+        </tr>
+        <tr>
+            <td>Pepito</td><!-- sirve para agregar datos en nuestra tabla -->
+            <td>Paez</td>
+            <!-- <td>ppaez@mail.com</td> -->
+        </tr>
+        <tr>
+            <td>Carlos</td><!-- sirve para agregar datos en nuestra tabla -->
+            <td>Suarez</td>
+            <td>csuarez@mail.com</td>
+        </tr>
+        <tr>
+            <td>Valentina</td><!-- sirve para agregar datos en nuestra tabla -->
+            <td>Rodriguez</td>
+            <td>vrodriguez@mail.com</td>
+        </tr>
+        <tr>
+            <td>Laura</td><!-- sirve para agregar datos en nuestra tabla -->
+            <td>Velasco</td>
+            <td>lvelasco@mail.com</td>
+        </tr>
+    </table>
+
+    <!-- Col = Columnas -->
+    <!-- Row = Filas -->
+
+</body>
+</html>

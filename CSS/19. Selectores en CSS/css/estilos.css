@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    color: #e63946;
+}
+div.contenedor{
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid rgb(72, 98, 248);
+    padding: 15px;
+    color: rgb(28, 58, 156);
+}
+div.contenedor.descendente p{ /* Selecciona todos los elementos parrafo, dentro del elemento que cumpla con las clases en mención */
+    background: burlywood; /* cambia el coloe=r de los elemento parrafo dentro del div que tenga las clases de contendor y descende */
+}
+
+div.contenedor.hijo > p{/* con el signo de mayor que, seleccionamos solo los elementos que son hijos directos */
+    background: chartreuse;
+}
+
+div.contenedor.adyacente + p{ /* con el simbolo de +, indicamos que el estilo se aplicara al elemento parrafo posterios al div(compuesto por sus hijos) que tienen la clase  */
+    background: deeppink;
+}
+
+div.contenedor.hermano ~ p{ /* con el simbolo de ~, indicamos que el estilo se aplicara a los elementos (Hemanos, osea que estan al mismo nivel) posteriores div que contiene la clase*/
+    background: rgb(255, 134, 20);
+}

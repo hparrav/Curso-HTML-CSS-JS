@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id='titulo'>Manejo DOM con JavaScript</h1>
+    <br/>
+    <form id='forma'><!-- Si metemos todos los imputs dentro de un formulario podemos aplicar el evento, estilos y la misma formula a todos los elementos -->
+        Nombre: <input type="text" id='nombre'/>
+        <br/><br/>
+        Apellido: <input type="text" id='apellido'/>
+    </form>
+    
+    <script>
+        //en caso de querer aplicar el mismo estilo a todos los elementos input, agupandolos en un formulario se simplifica el proceso
+        const forma = document.getElementById('forma'); //en vez de recuperar todos los elementos por seprado, recuperamos el formulario
+        //Utilizamos una constante ya que no vamos a cambiar la referencia.
+
+        forma.addEventListener('focus', (evento)=>{
+            evento.target.style.background = 'yellow';
+        }, true); //para este metodo de aplicar esta función a todos los elementos dentro del formulario, debemos agregar "true" como parametro adicional
+
+        forma.addEventListener('blur', (evento)=>{
+            evento.target.style.background = '';
+        }, true);
+
+
+        //De esta manera se simplifica el proceso ya que las fuanciones no se deben llamar por separado, si no que todo aplica a los elementos dentro del formulario
+
+       
+    </script>
+</body>
+</html>

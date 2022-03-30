@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body onload="entrar()"> <!-- onload es  un evento que se activa al terminar de cargar la página -->
+    
+    <h1 id='titulo'>Manejo DOM con JavaScript</h1>
+    <br/>
+    <div id='mostrar'></div>
+    
+    <script>
+        function entrar(){ //Esta función es llamada por el metodo onload, una vez termina de cargar la página
+            
+            alert('Entrando a la página web');//con alert se muestra una ventana pop-up de alerta, con el siguiente mensaje.
+            let texto = ''; //se crea una variable para asignar un mensaje deacuerdo a si las cookies de la página estan activas o no
+            if(navigator.cookieEnabled){ //con este metodo de navigator.cookieEnabled se valida si estan activas o no las cookies
+                texto = 'Cookies están habilitadas'; //Valor si estan activas
+            }
+            else{
+                texto = 'Cookies están inhabilitadas'; //Valor si estan activas
+            }
+            document.getElementById('mostrar').innerHTML = texto; //Se pasa el mensaje al div que tiene el id de "mostrar"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+*{ /* con el selector universal, le quitamos los padding y los margenes a todos los elementos, y así podremos comenzar a darle nuestras propias medidas */
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    text-align: center;
+    color: rgba(240, 27, 27, 0.924);
+}
+.divi1{
+    padding: 10px 15px 9px 5px;/* padding es el espacio que hay entre el elemento y el borde, se pueden asignar por extremos(top, rigth,botton, left)*/
+    border: 15px solid rgb(73, 71, 71); /* border es el recuadro que envuelve la caja */
+    margin: 20px 30px 8px; /* margin es el espacio que hay despues del borde y que separa el elemento de otros */
+    background-color: rgb(65, 121, 138);
+    width:1200px; /* el ancho se le aplica al elemento(contenido), pero para validar el ancho total se le debe sumar el padding, el border y el margin */
+    outline: 10px dashed  rgb(84, 108, 153);/* el outline es un elemento que esta entre el margin y el border, a este se le puede dar color y un tamaño */
+    /* el outline no suma contenido, si no que se sobre pone en el margen, por lo que no hace mas grande el elemtno sino que se acomoda dentro del tamaño del margin, si sobre pasa el tamño del margen entonces puede sobreponerse con otros elementos HTML */
+    outline-offset: 10px; /* esta propiedad nos permite dar una separación entre el ouline y el border */
+    box-sizing: border-box;/* para no pasarnos en el tamaño, se agrega esta propiedad para que se mantenga el elemento(incluyendo el padding) dentro de la medida establecida, para este caso los 300px del ancho */
+    
+}
+.divi2{/* se crea una copia igual a primer div para validar varias propiedades que nos permitiran acomodar mejor el elemento */
+    padding: 10px 15px 9px 5px;
+    border: 15px solid rgb(73, 71, 71); 
+    margin: auto; /* la propiedad auto en el margin, permite cetrar el elemento */
+    background-color: rgb(65, 121, 138);
+    max-width:1200px; /* permite que el elemento se ajuste automaticamente al ancho de la pantalla, si se reduce el se ajusta, no crece mas allá del valor definido */
+    /* esto tambien se puede aplicar a la altura con el max-height */
+}
+.divi3{
+    border: 15px solid rgb(73, 71, 71); 
+    margin-left: 20px; 
+    background-color: rgb(65, 121, 138);
+    width: 90%; /*  tambien se puede realizar un tamaño dinamico por porcentaje, indicandole en este caso que ocupe el 90% del espacio disponible */
+}
+
+p.interno{
+    margin-left: inherit;/* el inherit nos sirve para heredar calores de la misma propiedad que se relacione en el elemnto donde este contenido este*/
+    /* en este caso como este parrafo esta dentro del tercer div(elemento padre), tomara el malor margin-left igual al definido en el div (20px) */
+}
+
+/* El termino colapsar hace referencia a dos elementos en los cuales sus margenes se sobre ponen, predominando siempre la de mayor tamaño */
+/* por ejemplo si hay dos elementos donde su margen es de 30px cada uno, ellos no van a estar seprados por 60px(la suma de las margenes de cada uno, si no que tendran una separación de 30) */

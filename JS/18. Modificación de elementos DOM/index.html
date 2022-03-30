@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con JavaScript</title>
+    <style>
+        .azul{
+            color: blue;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="cabecero">Ejemplo DOM con JavaScript</h1> <!-- cada etiqueta es un objeto, por lo que tiene atributos y metodos -->
+    <p id="parrafo">Saludos!!!</p>
+
+    <p class="azul">Saludos por segunda vez!</p>
+
+    <p class="azul">Esto ya no es un saludo!</p>
+
+    <h2 class="azul">Esto es un cabecero con h2</h2>
+
+    <script> //Podemos incrustar código JS directamete en el archivo HTML: El script debe ir despues de los elementos HTML
+        //"document" es el objeto que se utiliza para acceder a los elementos de el documento HTML "DOM"
+        //inner significa interno, por eso recupera el valor interno de la etiqueta
+        let cabecero = document.getElementById("cabecero").innerHTML; //Accedemos y recuperamos el texto del elemento h1 en html
+        let parrafo = document.getElementById("parrafo"); //Podemos solo seleccionar el elmento por ID y el utilizar el innerHTML en el console.log para capturar su contenido
+        console.log("Saludos desde JavaScript");
+        console.log(`El texto de cabecero es: ${cabecero}, y el texto del parrafo es: ${parrafo.innerHTML}`);
+
+        //Para modificar el contenido de un elemento, tambien usamos el metodo innerHTML
+        parrafo.innerHTML = 'Esta es una modificación al mensaje del párrafo.';
+        console.log(`El texto del parrafo ha sido modificado: ${parrafo.innerHTML}`);
+
+        document.getElementById("cabecero").innerHTML = "DOM con JAVASCRIPT"; //Podemos modificar directamente con el objeto document y sus metodos
+
+        
+        /* ------------------------------------------------------------------------------------------------------------------------ */
+        //Tambíen podemos recuperar los valores de elementos con la misma etiqueta, para ele ejemplo utilizaremos los parrafos
+        let parrafos = document.getElementsByTagName('p'); //obtenemos un arreglo con los valores de todos los parrafos en el DOM
+        console.log(`No. de párrafos: ${parrafos.length}`);
+
+        for(let i=0; i<parrafos.length; i++){ //utilizamos un for para recorrer el arreglo de los valores de los parrafos.
+            console.log(`párrafo #${i+1}: ${parrafos[i].innerHTML}`);
+        }
+
+
+        /* ------------------------------------------------------------------------------------------------------------------------ */
+        //Podemos modificar elementos con clases CSS mediante el getElementByClassName
+        let elementosClass = document.getElementsByClassName('azul'); //obtenemos un arreglo con los valores de todos los elementos con clase .azul
+        console.log(`No. de elementos con clase .azul: ${elementosClass.length}`);
+        let indice = 0;
+
+        for(let elemento of elementosClass){ //utilizamos un for-of para recorrer el arreglo de los valores de los elementos con clase .azul
+            indice++;
+            console.log(`Elemento #${indice}: ${elemento.innerHTML}`);
+        }
+
+
+        /* ------------------------------------------------------------------------------------------------------------------------ */
+        //Empleando el querySelectorAll se puede seleccionar por el tipó de etiqueta y por la clase al mismo tiempo
+        let elementosParrafoClass = document.querySelectorAll('p.azul'); //obtenemos un arreglo con los valores de todos los elementos de parrafo con clase .azul
+        console.log(`No. de elementos de parrafo con clase .azul: ${elementosParrafoClass.length}`);
+        indice = 0;
+
+        for(elementox of elementosParrafoClass){ //utilizamos un for-of para recorrer el arreglo de los valores de los elementos con clase .azul
+            indice++;
+            console.log(`Elemento #${indice}: ${elementox.innerHTML}`);
+        }
+    
+    </script>
+    
+</body>
+</html>

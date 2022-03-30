@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de eventos con DOM, HTML y JavaScript</title>
+</head>
+<body>
+    <h1>Manejo de eventos con DOM, HTML y JavaScript</h1>
+    <!-- El evento onclick se activa al darle click al elemento -->
+    <!-- Podemos escribir el scrip dentro de la etiqueta con el evento onclic, se debe utilizar el this.  ya que indica que esta apuntando a ese elemento, en este caso al h2 -->
+    <h2 onclick="this.innerHTML = 'Cambio del texto con evento onclick directamente en la etiqueta'">Dar click a este titulo para cambiarlo</h1> 
+    <br/>
+    <!-- No es recomendable escribir el codigo dentro de la misma etiqueta, por loq eu la mejor manera de hacerlo es llamando una función en javascript, se debe usar la palabra this. para apuntar al objeto y acceder a sus metodos -->
+    <h2 onclick="evento(this)">Dar click para cambiar este segundo título</h2>
+    <br/>
+
+    <script>
+        function evento(titulo){ //Función que se manda a llamar para cambiar el texto en el cabecero h2, al darle click le pasa la referencia a la que esta apuntando el this a la variable titulo
+            titulo.innerHTML = "Se cambia el titulo mediante el llamado a una función por el evento onclick";
+            console.log(titulo); //Podemos ver en consola al elemento que apunta el this y que se lo transfiere a la variable titulo
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos inline y block</title>
+    <link rel="stylesheet" href="/HTML/6. Elementos inline,block en HTML y más/css/estilos.css">
+</head>
+<body>
+
+    <h2>Elementos span (inline)</h2> <!-- Los elementos en linea no inician en una nueva linea, si no que continuan en la misma -->
+    <p>Texto dende se 
+        <span style="color: brown; border: 2px solid black; padding: 6px;">enfatiza</span> y 
+        <span style="color: blueviolet; font-weight: bold;">cambia el color de algunos elementos</span>
+    </p> <!-- Los elementos en linea, modifican los elementos, pero siepre en la mima linea que estamos trabajando-->
+
+
+    <h2>Elementos div (block)</h2> <!-- Los elementos de bloque se inician en una nueva linea -->
+    <div class="bloque">
+        <h3>Título del div</h3>
+        <p>Texto dentro del div</p>
+    </div>
+    <p>Texto fuera del div</p>
+
+
+    <br/><br/><br/><br/><br/><br/>
+    <a href="/6. Elementos inline,block en HTML y más/atributo.html">atributos</a>
+
+    <br/><br/><br/>
+    <!-- Un Frame en HTML es un marco en el cual se puede agregar informarmación HTML (Sitios HTML, otras paginas WEB, videos, documentos, etc) -->
+    <h2>Uso de <b>iframe</b> en HTML</h2>
+
+    <iframe class="titulo" name="marco1" src="/6. Elementos inline,block en HTML y más/atributo.html" frameborder="0"></iframe> <!-- utilizamos el atributo nombre, para asignarle una referencia al frame la cual se modificara con dos link que le asignaran el enlace que mostrara el frame -->
+    <div class="centrar"> <!-- Creamos un div para incluir los link que tenfran funciones de un boton -->
+    <a class="boton" href="https://www.google.com/" target="marco1">Cargar Google</a>
+    <a class="boton" href="/6. Elementos inline,block en HTML y más/atributo.html" target="marco1">Cargar atributos</a>
+    </div>
+
+
+</body>
+</html>

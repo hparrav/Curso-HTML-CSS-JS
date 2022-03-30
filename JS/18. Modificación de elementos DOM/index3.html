@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="titulo">DOM con JavaScript</h1>
+    <button onclick="mostrar()">Aplicar document.write</button>
+    <br/> <br/> <br/> <br/>
+    <button onclick="cambioContenido()">Cambio de contenido con getElementById</button>
+    <br/> <br/> <br/> <br/>
+
+    <script>
+        document.write("Este texto es con document.write, pero no sobreescribe el DOM ya que se carga desde el incio con los demas elementos HTML");
+
+        function mostrar(){
+            //Hay que tener cuidado al utilizar el document.write, y que este puede sobreescribir todo el contenido una vez que haya cargado la p+agina por completo
+            document.write("Con un llamado a una función por medio de el boton, se sobre escribe el DOM ya que se esta emplenado el metodo document.write, despues de que la pagina cargo por primera vez");
+        }
+
+        function cambioContenido(){
+            document.getElementById("titulo").innerHTML = "Cambio de contenido con getElementById e innerHTML";//Cambio del contenido del h1
+        }
+
+    </script>
+   
+</body>
+</html>

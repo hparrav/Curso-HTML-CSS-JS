@@ -1,0 +1,18 @@
+body{
+    background-color: dodgerblue;/* Para aplicar un color de fondo a nuestra pagían WEB (Es bueno tener un color de fondo parecido a la imgen de fondo que defina, por si llega a fallar)*/
+    color: cornsilk;/* Cambio de color de leta de toda la pagina WEB */
+    background-image: url("../img/fondo.png");
+    background-position: right top; /*  se puede dar una posición deseada a la imagen */
+    background-repeat: no-repeat;/* Esta porpidad impide que la imagen se repita cuando crece el tamño de la pantal o se reduce el tamaño de visualización */
+    background-attachment: fixed;/* con esta propiedad permitimos que la imagen quede estatica mientras se utiliza el scroll para bajar en la pantalla */
+    /* si queremos que la imagen tambien baje con el scrol, utilizamos el valor scroll en vez de fixed */
+
+/* Todo esto pude ser resumido con el atributo background y obtener el mismo resultado
+
+    background:dodgerblue url("../img/fondo.png") no-repeat right top;
+
+*/  
+}
+h1{
+    margin-bottom: 1000px;/* utilizamos este margen para poder separar el titulo y el texto, lo suficiente para poder hacer uso del scroll y validar la propiedad de background-attachment */
+}

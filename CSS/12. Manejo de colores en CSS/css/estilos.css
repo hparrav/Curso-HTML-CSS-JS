@@ -1,0 +1,39 @@
+h1{
+    text-align: center;
+    color: brown;
+    font-size: 70px;
+}
+.caja{
+    padding: 50px;
+    color: white;
+    width: 100px;
+    height: 150px;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 20px;
+    float: left;/* Se flotan las cajas hacia la izquierda, ya que son de tipo bloque pasan de ordenarse horizontalmente, para comenzar a ubicarse verticalmente  */
+}
+.rojo{
+    background-color: crimson; 
+}
+.rosa{
+    background-color: deeppink; 
+}
+.rgb{
+    background-color: rgb(98, 40, 98); 
+}
+.rgba{
+    background-color: rgb(98, 40, 98,.5); 
+}
+.hexadecimal{
+    background-color: #0091ad; 
+}
+.hex_transparencia{
+    background-color: #0090ad78; 
+}
+.hsl{
+    background-color: hsl(147, 90%, 21%); 
+}
+.hsla{
+    background-color: hsla(147, 91%, 21%, 0.2); 
+}

@@ -1,0 +1,32 @@
+html{ /* aplica estilo a toda la vista del html */
+    height: auto; /* deja vertical el gradiente y centra la vista*/
+    min-height: 100%; /* el valor minomo del alto es 100% de la pantalla y no se repita */
+}
+body{
+    /* SE GENERAN DIFERENTES FORMAS DE APLICAR EL GRADIENTE, DESDE CAMBIAR SU ORIENTACIÓN HASTA HACERLO CIRCULAR */
+
+    /* background: linear-gradient(#f72585, #3a0ca3); */
+    /* background: linear-gradient(to right, #f72585, #3a0ca3); */
+    background: linear-gradient(#24404d, #6dbff1, black);
+    /* background: linear-gradient(to bottom right, #f72585, #3a0ca3); */
+    /* background: linear-gradient(145deg, #f72585, #3a0ca3); */
+   /*  background: radial-gradient(circle, #0d47a1, #c6cdd3dc); */
+    
+    
+    color: #f1faee; /* color de la letra */
+
+}
+h1{
+    text-align: center;
+}
+div.contenedor{
+   width: 30%; 
+   height: 20%;
+   margin: auto;
+   border: 3px solid rgb(90, 155, 216);
+   padding: 15px;
+   text-align: center;
+}
+img{
+    width: 100%;
+}

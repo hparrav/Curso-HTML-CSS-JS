@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+</head>
+<body>
+    <!-- Un formulario permite capturar información del usuario -->
+    <h1>Formularios en HTML</h1>
+
+    
+    <form> <!-- si en la etiqueta de form utilizamos el atributo novalidate, entonces ningun campo sera validador en ese formulario -->
+        
+
+        <!-- Los elementos de tipo input nos permiten capturar información de parte del usuario -->
+        <label for="nombre">Nombre: </label> <br/> <!-- Etiqueta que nos permite dar información de lo que requiere el formulario (el atributo de for es para que cuando se de clic sobre el label este lo dirija al elemento con ese id definido, se relacionan) -->
+        <input type="texto" id="nombre" name="nombre" placeholder="Ingrese nombre" required="true"> <br/> <!-- elemento input de tipo texto --> <!-- El atributo name nos sirve para mostrar el parametro que se va a envíar al servidor (ej: nombre:el que ingrese el usuario)-->
+        <!-- el atributo placeholder es un texto informativo que el usuario sustituye al escribir en el formulario-->
+        <!-- el atributo require se emplea para solicitar una validación sobre el formulario, osea que lanzara un mensaje de no escribirse nada -->
+        <label for="apellido">Apellido: </label>  <br/> 
+        <input type="texto" id="apellido" name="apellido" value="Parra" placeholder="Ingrese apellido"> <br/> <!-- con el atributo value podemos agregar un valor inicial-->
+        <br>
+        <input type="submit" value="Enviar" > <!-- elemento input de tipo boton que envía información -->
+        <input type="submit" formnovalidate = "formnovalidate" value="Envíar sin validar" > <!-- otra forma de enviar el formato sin validarlo -->
+        <br/><br/><br/><br/>
+    </form>
+
+    <form method="POST"> <!-- por defecto el metodo es GET, pero ya que vamos a manejar datos sensibles se usa post (cambiar entre POST y GET para validar el cambio en la URL) -->
+        <!-- Por default para el envío metodo de envío es el GET, el cual envía mediante la URL de la pagina (query string), los parametros y datos del formulario -->
+        <!-- Cuando se trabaja con datos sensibles como contraseñas, no se pueden mostrar los datos en la URL, por lo que usamos el metodo POST -->
+
+        <fieldset> <!-- este elemento sirve para darle un marco al formulario -->
+        <legend>Datos persona</legend> <!-- el elemento legen le da un titulo al fomulario -->
+
+            <label for="nombre">Nombre:</label><br/>
+            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required= "true"><br/>
+            <label for="correo">Correo:</label><br/>
+            <input type="email" name="correo" id="correo" placeholder="Escribe tu correo" required= "true"><br/><!-- input de tipo email, valida que el dato que se ingresa tenga la estructura valida de un correo -->
+            <label for="edad">Edad:</label><br/>
+            <input type="number" name="edad" id="edad" required= "true" step="any" min="0"><br/> <!-- input de tipo numerico, con el step="any" aceptamos numeros con decimal, el min y el max es para definir el rango -->
+            <label for="password">Contraseña:</label><br/>
+            <input type="password" name="password" id="password" required= "true"><br/> <!-- input de tipo passwor, utilizado para la recepción de contraseñas, no muestra datos miestas se ingresa la contraseña-->
+            <label>Genero:</label><br/>
+            <input type="radio" id="femenino" name="genero" value="femenino"> <!-- el radio button permite seleccionar uno u otro dato de una lista, estos deben ir relacionados por el name, en este caso genero, el dato que devuelven es el del value  -->
+            <label for="femenino">Femenino</label><br/>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label><br/>
+            <label>Música favorita:</label><br/>
+            <input type="checkbox" id="salsa" name="musica" value="salsa"> <!-- los checkbox tambien se relacionan por el name, pero en estos si se permiten seleccionar varios al tiempo -->
+            <label for="salsa">Salsa</label><br/>
+            <input type="checkbox" id="rock" name="musica" value="rock">
+            <label for="rock">Rock</label><br/>
+            <input type="checkbox" id="jazz" name="musica" value="jazz">
+            <label for="jazz">Jazz</label><br/>
+            <label for="autos">Marca favorita de autos:</label><br/>
+            <select name="autos" id="autos">  <!-- select es un elemento de lista desplegable, con el atributo de (multiple="true"), podemos seleccionar mas de un opción a la vez -->
+                <option value="volvo">Volvo</option> <!-- con options agregamos datos a la lista -->
+                <option value="bmw">BMW</option>
+                <option value="audi" selected="true">Audi</option> <!-- con el atributo de selected, muestra este valor como defecto de la lista -->
+            </select><br/>
+            <label for="comentario">Comentario:</label><br/>
+            <textarea name="comentario" id="comentario" cols="30" rows="5" placeholder="Escriba un comentario....."></textarea><br/><br/> <!-- este elemento es una caja de texto que permite introducir texto -->
+
+
+            <input type="submit" value="Enviar">
+
+        </fieldset>
+
+    </form>
+
+    <form method="POST" autocomplete="off" action="mi_servidor" target="-blank"> 
+        <!-- el metodo autocomplete activa y desactiva, las recomendaciones de datos en los inputs (cuando estan activos toma como referencia valores previamente ingresados) -->
+        <!-- el metido action indica la ruta del servidor a el cual se enviara la información del formulario -->
+        <!-- el target premite que la respuesta del servidor se de en una nueva pestaña, si no esta referenciado este elemento la respuesat se da en la misma pestaña -->
+
+        <fieldset> 
+        <legend>Datos</legend> 
+
+            <label for="id">ID Persona:</label><br/>
+            <input type="text" name="id" id="id" value="CE61059" readonly="true" disabled="true"><br/>
+            <!-- con el elemto readonly se puede bloquear la entrada del elemento del input, el dato que mostrara generalemte se traera desde el servidor -->
+            <!-- con el elemento disable podemos desabilitar el elemento y por lo tanto al momento de enviar los datos del formulario, el dato que se tenga en este input no sera enviado -->
+            
+            <input type="hidden" name="sistema" id="sistema" value="SAP"><!-- Estos elementos de tipo oculto no se muestran en el formulario, pero su valor si es enviado al servidor -->
+
+            <label for="nombre">Nombre:</label><br/>
+            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required= "true"><br/>
+            <label for="correo">Correo:</label><br/>
+            <input type="email" name="correo" id="correo" placeholder="Escribe tu correo" required= "true"><br/><!-- input de tipo email, valida que el dato que se ingresa tenga la estructura valida de un correo -->
+            <label for="edad">Edad:</label><br/>
+            <input type="number" name="edad" id="edad" required= "true" step="any" min="0"><br/> <!-- input de tipo numerico, con el step="any" aceptamos numeros con decimal, el min y el max es para definir el rango -->
+ 
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Restablecer"><!-- este boton permite resetear los input a la configuración inicial, orrando los datos introducidos por el usuario -->
+
+        </fieldset>
+
+    </form>
+    
+</body>
+</html>

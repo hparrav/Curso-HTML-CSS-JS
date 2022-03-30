@@ -1,0 +1,28 @@
+h1{
+    color: rgb(143, 11, 66);
+    background-color: beige;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #ced4da;
+    /* sombra que se genra, 1. en el eje x, 2. en el eje y, 3. Que tanto se difumina, 4. el color de la sombra */
+    letter-spacing: 5px;/* da espacio entre letras, tambien se le puede dar valores negativos para pegarlas más */
+    word-spacing: 12px;/* Es para dar separación entre palabras */ 
+    text-decoration: overline underline; /* decoración del texto */
+}
+
+.caja{
+    padding: 15px; 
+    margin: auto; /* para que nuestro elemento div se centre */
+    width: 70%;/* Para que ocupe el 50% de la pantalla */
+    background-color: #219ebc;
+    border-radius: 5px;
+    color: white;
+}
+.texto{
+    text-align: justify;
+    text-indent: 50px; /* Da una identación al incio del texto */
+    line-height: 3;/*  incrementa el espacio entre lineas (interlineado) */
+    text-shadow: 1px 1px 2px #ced4da;
+    font-size: 20px;
+   
+}

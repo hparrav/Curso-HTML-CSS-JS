@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox en CSS</title>
+    <link rel="stylesheet" href="/CSS/21. Flexbox en CSS/css/estilos.css">
+</head>
+<body>
+    <h1>Flexbox en CSS</h1>
+    <div class="contenedor"> 
+        <p style="order: 5">Texto 1</p> <!-- con la propiedad de order, se modifica el orden en el que se muestra los elementos -->
+        <p style="order: 3">Texto 2</p>
+        <p style="order: 4">Texto 3</p>
+        <p style="order: 1">Texto 4</p>
+        <p style="order: 6">Texto 5</p>
+        <p style="order: 2">Texto 6</p>
+    </div>
+    <br>
+    <div class="contenedor2"> 
+        <p style="flex-grow: 2">Texto 1</p> <!-- aumenta el tamaño del elemento -->
+        <p style=" flex-basis: 200px; height: 100px">Texto 2</p> <!-- indica que ele elemento ocupa 200px -->
+        <p style="align-self: center">Texto 3</p> <!--  posiciona unicamente el elemento que se selecciona, cuanto no esta aplicado el atributo de align-item o align-content -->
+    </div>
+    
+</body>
+</html>

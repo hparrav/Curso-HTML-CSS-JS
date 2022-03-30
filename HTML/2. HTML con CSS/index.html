@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página HTML</title>
+    <style> 
+        h1{ /* Se pueden agregar estilos a los elementos del HTML, de la siguiente manera */
+            color: darkblue;
+            font-size: 60px;
+        }
+    </style> <!-- Se puede agregar estilos desde la cabecera, empleando CSS  -->
+
+    <link rel="stylesheet" href="css/estilos.css"/><!-- Para traer los estilos desde otro archivo, utilizamos Link, con el cual 
+        se indica el tipo de relación("styleseheet") y tambien el enlace hacia la hoja de estilos -->
+
+</head>
+<body>
+    <h1>Curso HTML</h1>
+    <p style="color: crimson;"> Color por nombre</p> <!-- El color se puede dar por nombre -->
+    <p style="color: rgb(220, 20, 60);">Color por RBG</p> <!-- El color se puede dar por combinación RGB -->
+    <p style="border: 10px solid rgba(220, 20, 60, .5)">Color por RBGA(con transparencia)</p> <!-- El color se puede dar por combinación RGBA (la a indica la trasparencia) -->
+    <p style="color: hsl(348, 83%, 47%);">Color por hsl</p> <!-- El color se puede dar por hsl -->
+    <p style="color: #db143c;">Color por hexadecimal</p> <!-- El color se puede dar por hexadecimal -->
+    <p style="background-color: blueviolet;">Sobrescribiendo el Background brindado por el elemento padre, por el que se le da al hijo (Cascada)</p>
+    <br/><br/>
+
+
+    <!-- Metodo de caja -->
+
+    <img src="imagenes/png;base6458b9a07ec9f5f16d.png" alt="metodo de caja">
+    <h2>Elemento 1</h2> <!-- Su estilo es modificado desde la hoja de estilos -->
+    <h2>Elemento 2</h2>
+    <h3>Elemento 3</h3>
+    <h4>Elemento 4</h4>
+    <br/><br/>
+    
+
+
+    
+</body>
+</html>

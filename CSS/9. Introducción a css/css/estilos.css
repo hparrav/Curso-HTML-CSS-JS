@@ -1,0 +1,31 @@
+*{ /* este es un selector universal, que aplicara estilo a toda la página */
+    background-color: darkgray;
+}
+
+h1{ /* los elementos se referencian directamente, sin necesidad de un simbolo inicial */
+    color: blue !important;/* con el !important se prioriza el estilo que se de desde la hoja de estilos, a pesar de que en el HTML se le este definiendo un esilo que por jerarquia tendría mas prioridad */
+}
+#titulo{ /* el # se utiliza para referenciar un id */
+    color: crimson;
+    text-align: center;
+}
+
+.parrafo{ /* El . se utiliza para referenciar a una clase, si la clase tiene dos o mas palabras usamos el guion abajo o al medio ej: centrar-texto o centrar_texto */
+    text-align: center;
+    color: darkblue;
+
+}
+
+.texto_grande{
+    font-size: 20px;
+}
+
+h1, h2, p{ /* así se agrupan varios elementos y se les aplican estilos al tiempo */
+    background-color: floralwhite;
+}
+
+pre.parrafo{ /* para seleccionar un tipo de elemento especifico que contenga una clase, sin afectar otros tipos de elementos que contengan la misma clase, usamos esta estructura de subclase */
+    font-size: 30px;
+    color: forestgreen;
+    background: ivory;
+}/* solo aplicara el estilo a los elementos pre que contengan la clase parrafo */

@@ -1,0 +1,26 @@
+h1{
+    color:rgba(4, 24, 90, 0.966);
+    font-size: 100px;
+}
+ul{
+    list-style-type: none; /* Quita la viñeta */
+    background-color: rgb(24, 113, 195);
+    overflow: hidden; /* muestra los elementos de la lista como un bloque independiente, lo desprede de otros elementos */
+    padding: 0; /* le dejamos un margen y un padding de 0 */
+    margin: 0;
+}
+li{
+    float: left; /* Los item van flotando a la izquierda y se acomodan a la derecha, osea que quedan de manera horizontal */
+}
+li a{ /* Toma solo las etiquetas de enlace que esten dentro de un list item */
+    display: block; /* Para que los elementos se desplieguen como un bloque */
+    color: cornsilk;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: rgb(34, 34, 236);
+}
+
+

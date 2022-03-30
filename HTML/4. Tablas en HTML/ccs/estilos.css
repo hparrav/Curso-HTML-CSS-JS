@@ -1,0 +1,29 @@
+table{
+    width: 100%; /* Acomoda el ancho de la tabla al 100% del tamaño de la pagina */
+}
+table, th, td{/* Se pueden modificar el estilo de diferentes elementos al timepo */
+    border: 3px solid black;/* Se agrega uun borde, de 1px de grosor, de tipo solido y de color negro */
+    /* border-spacing: 5 px;  //Se utiliza para dar una separacion a los espacios entre bordes, esto se puede hacer cuando no esta colapsado */
+    border-collapse: collapse;/* el colapsar el borde permite quitar espacios entre bordes, y al estar colapsado solo se presentaria una linea en las divisiones de la tabla */
+    padding: 5px; /* espacio inteno de los elemntos de la tabla, al colocar un solo valor, por defrcto lo toma para los 4 lados(rop, rigth, botton y left) */
+}
+td{
+    text-align: center;/* Para centrar los datos que tienen las etiquetas td */
+}
+caption{
+    color: blue; /* color de la letra */
+    font-family: 'Trocchi'; /* fuente de la letra */
+    font-size: 45px; /* tamaño de la letra */
+    line-height: 70px ; /* espacio de la linea de separación inferior */
+}
+th{
+    color: rgb(240, 238, 235);
+    background-color: darkblue;
+}
+tr:nth-child(even){ /* Seleccionamos los reglones pares */
+    background-color: gray;
+
+}
+tr:nth-child(odd){ /* Seleccionamos los reglones inpares */
+    background-color: paleturquoise;
+}

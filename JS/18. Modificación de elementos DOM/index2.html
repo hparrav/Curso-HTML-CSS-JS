@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Formulario con JavaScript</title>
+</head>
+<body>
+    <form id='formulario'> <!-- Definimos un formulario con los valores de nombre yu apellido -->
+        Nombre:<input type="text" name="nombre" value="Juan"/>
+        <br/>
+        Apellido:<input type="text" name="apellido" value="Perez"/>
+        <br/>
+    </form>
+    <button onclick="mostrarValores()">Mostrar</button> <!-- Creamos un boton que llame la función de mostrar valores -->
+    <br/>
+    <button onclick="mostrarValores2()">Mostrar Valores Individuales</button>
+    <br/>
+    <div id="valores">  </div>
+    <br/>
+    <div id="valores2">  </div>
+
+    <script>
+        function mostrarValores(){
+            let formulariox = document.forms["formulario"];//Con el metodo de .forms, podemos recuperar los valores del formulario
+            let texto = ""; //Creamos una variable que almacenara todos los valores recuperados del formulario
+            for(let element of formulariox){
+                texto += element.value + "<br/>"; //recorremos el arreglo y adicionamos los valores a la variable texto
+            }
+            document.getElementById("valores").innerHTML = texto; //Pasamos los valores de la variable texto al el div con clase valores
+        }
+
+        /*Otra manera de recuperar el valor individual de los elementos en los formularios es usando la sintaxis del arreglo e indicando cual es el elemento al que deseamos acceder */
+        function mostrarValores2(){
+            let formularioz = document.forms["formulario"];
+            let textoIndividual = " ";
+            let nombre = formularioz["nombre"];//indicamos el nombre del imput para tomar todo el elemento
+            let apellido = formularioz["apellido"];
+
+            textoIndividual = `El Nombre es: ${nombre.value} y el Apellido es: ${apellido.value}`; //Obtenemos los valores de cada objeto individual
+            document.getElementById("valores2").innerHTML = textoIndividual; //Pasamos los valores individuales de la variable almacenadas en un string en textoIndividual
+        }
+
+    </script>
+</body>
+</html>

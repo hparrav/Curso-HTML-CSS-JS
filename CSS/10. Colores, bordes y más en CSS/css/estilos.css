@@ -1,0 +1,61 @@
+h1{
+    text-align: center;
+}
+.rojo{
+    border: 10px solid firebrick; /* color por nombre */
+    /*background-color: firebrick;*/
+}
+.rosa{
+   border: 10px dashed rgb(255, 105, 180); /* color por RGB */
+}
+.amarillo{
+    border: 10px double #ffd700; /* color por hexadecimal */
+}
+.azul{
+    border: 10px dotted hsl(174, 72%, 56%); /* color por hsl */
+}
+
+/* BORDES */
+.punteado{
+    border-style: dotted;  /* seleccionamos el estilo del borde */
+    border-width: 10px 5px 3px 2px;/* Se le puede asignar un grosor al cada lado del borde */
+}
+.discontinuo{
+    border-style: dashed;
+    border-width: thick ;/* podemos aplicar un grosor a todos los lados del borde (thin, medium,thick) */
+    border-color: rgb(11, 59, 19) red blue goldenrod; /* se aplica un color diferente a cada lado del borde */
+}
+.solido{
+    border: 10px solid rgba(2, 75, 38, 0.287); /* con solo el atributo border, podemos ir agregandole condiciones para el estilo */
+    /* se le aplica un color con transparencia */
+
+    border-radius: 23px 10px; /* redondeo de los bordes */
+}
+.doble{
+    border: 5px double;
+}
+.surco{
+    border: 10px groove;  /* tambien se puede hacer de manera individual cada parametro del atributo */
+    /*border-width: 10px;     
+    border-style: groove;*/
+    border-radius: 20px 0px 10px 0px;/* se puede redondear el borde por esquinas de la caja de borde */
+}
+.cresta{
+    border: 10px ridge;
+}
+.recuadro{
+    border: 10px inset;
+}
+.outset{
+    border: 10px outset;
+}
+.sin_borde{
+    border: none; /* sin borde */
+}
+.oculto{
+    border: hidden; /* borde escondido */
+}
+.mixto{
+    border-style: dotted solid dashed double; /* los bordes se pueden mezclar para los cuatro lados (top, rigth, botton, left) */
+
+}

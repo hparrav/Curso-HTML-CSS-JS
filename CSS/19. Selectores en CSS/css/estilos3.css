@@ -1,0 +1,37 @@
+h1{
+    text-align: center;
+    color: #e63946;
+}
+div.contenedor{
+    width: 30%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    color: #457b9d;
+    text-align: center;
+}
+div.contenedor p::selection{ /* Pseudoclase con doble punto, al momento de seleccionar el texto lo hace de color rojo */
+    color: red;
+    background-color: yellow;
+}
+div.contenedor p::first-line{ /* pseudo clase que hace que la primera linea de cada parrafo del elelemnto, este en mayuscula y la primera letra un poco mas grande */
+    font-variant: small-caps;
+    color: red;
+}
+div.contenedor p::first-letter{ /* primera letra de un tamaño diferente */
+    font-size: 1.5em;
+}
+div.contenedor p::before{ /* agrega un caracter al inicio del parrafo */
+    content: "- ";
+}
+div.contenedor p::after{/* agrega un caractero al final del parrafo */
+    content: " -";
+}
+
+img{
+    opacity: 0.5;/* le damos una transparencia a la imagen del 50%, esto estara simepre por default en este caso */
+}
+img:hover{
+    opacity: 1;/* cuando el cursor pase por encima de la imagen, entonces ya no tendra ninguna opacidad */
+}

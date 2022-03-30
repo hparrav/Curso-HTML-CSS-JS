@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de eventos con HTML y JavaScript</title>
+</head>
+<body>
+    <!-- La mejor foma de cambiar texto con un evento, es desde JavaScript, por lo que solo dandole un identificador a la etiqueta,
+    podemos definir el evento y la función de cambio desde el script -->
+    <h1>Manejo de eventos con HTML y JavaScript "Todos los eventos y cambios desde EL Script"</h1>
+    <br/>
+    <h2 id="titulo">Dar click a este titulo para cambiarlo</h1> 
+    <br/>
+    <p id="parrafo">Texto de parrafo</p>
+
+    <script>
+        //La función de llamar texto es de tipo callback y por lo tanto no lleva parentesis.
+        document.getElementById("titulo").onclick = cambiarTitulo;  //Asignamos el evento de onclick al elemento con id titulo y lo enlazamos fon la función de cambiarTitulo 
+        
+        function cambiarTitulo(){ //Creamoa la función para cambiar el titulo
+            //Con el getElementById y el innerHTML podemos generar el cambio
+            document.getElementById("titulo").innerHTML = "Nuevo texto cambiado con evento desde JavaScript";   
+            
+            //Con el mismo evento del titulo podemos cambiar otros elementos.
+            document.getElementById("parrafo").innerHTML = "Este texto de parrafo fue cambiado con el mismo evento de dar click al titulo, utilizando la misma función para este cambio";
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id='titulo'>Manejo DOM con JavaScript</h1> 
+    <br/>
+    <!-- El evento onchange hace un llamado a una función, en el momento que detecta un cambio en su valor
+    Para este caso utilizamos una caja de entrada de texto, la cual al momento de ingresarle algun valor, lo transformara en MAYUSCULAS -->
+    Nombre: <input type="text" id="nombre" onchange="convertir(this)"/>
+    <!-- Empleamos el evento onchange, llamando la funcón y pasandole como paramete el apuntador this que hace referencia a esa etiqueta [Objeto] -->
+
+    <script>
+
+        function convertir(nombreInput){ //La función recibe el apuntador que hace refencia al elemnto imput y lo almacena en la variable nombreInput
+            nombreInput.value = nombreInput.value.toUpperCase(); //Accedemos al valor del objeto y le asignamos el mismo valor, pero tranformado en mayuscula empleando el metodo toUpperCase
+        }
+
+    </script>
+</body>
+</html>

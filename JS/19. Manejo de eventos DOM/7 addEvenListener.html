@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id='titulo'>Manejo DOM con JavaScript</h1>
+    <br/>
+    Nombre: <input type="text" id='nombre'/>
+    <br/><br/>
+    Apellido: <input type="text" id='apellido'/>
+    <br/><br/>
+    Dirección: <input type="text" id='direccion'/>
+    
+
+    <script>
+
+        //Con el metodo addEventListener podemos configurar varios eventos desde JS, utilizando el id del elemento y en el script indicando el tipo de evento que se va a captutar
+        //Configuramos los eventos para el nombre
+        document.getElementById('nombre').addEventListener('focus', cambiar); //Configuramos el elemento onfocus desde JS, solo se debe colocar "focus" quitando el on
+        document.getElementById('nombre').addEventListener('blur', regresar);//Configuramos el elemento blur desde JS, solo se debe colocar "blur" quitando el on
+        //Lafucnion que se relaciona es una función callback, por lo tanto no lleva parentesis.
+
+        //Configuramos los eventos para el nombre
+        document.getElementById('apellido').addEventListener('focus', cambiar); 
+        document.getElementById('apellido').addEventListener('blur', regresar);
+
+        function cambiar(evento){ //estructutramos el evento para cuando se ponga foco en un elemento
+            let componente = evento.target; //Target hace referencia al elemento que esta llamando la función
+            componente.style.background = 'yellow';
+        }
+        function regresar(evento){ //estructutramos el evento para cuando se quite el foco o deseleccione un elemento
+            evento.target.style.background = 'white';
+        }
+
+
+        //Tambien podemos hacer esto directamente con una función flecha. la cual solo servira para el elemnto al que se defina y no podra ser reutilizada por otro
+        document.getElementById('direccion').addEventListener('focus', (evento)=>{
+            evento.target.style.background = "pink"; //Target hace referencia al elemento que esta llamando esta función
+        }); 
+
+        document.getElementById('direccion').addEventListener('blur',(evento)=>{
+            evento.target.style.background = "white";
+        });
+
+
+    </script>
+</body>
+</html>

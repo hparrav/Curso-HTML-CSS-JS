@@ -1,0 +1,35 @@
+a:link {/* Indica cual es el color por defecto del link, cuando aún no se ha dado clic sobre el*/
+    color: #55a29e;
+    text-decoration: none; /* indica que no se aplique ningun subrayado en el texto */
+}
+a:visited{/* indica el color que tomara el link, una vez ya se haya dado clic sobre el(ya se visito) */
+    color: #a79982;
+    text-decoration: none; /* indica que no se aplique ningun subrayado en el texto */
+}
+a:hover{/* estilo que tomara cuando con el cursor nos ponemos encima del link */
+    color: #155e41;
+    text-decoration: underline; /* Si se agrega el subrayado */
+}
+a:active{/* Estilo que toma cuando se le da clic al link */
+    color: #120000;
+    text-decoration: underline; /* Si se agrega el subrayado */
+}
+.boton:link, .boton:visited{ /* Se puede seleccionar el elemento por su clase, tambien dos estados del elemento al tiempo se le pueden asignar los mismos parametros */
+    background-color: rgb(114, 226, 174);  /* Color de fondo del recuadro */
+    color: rgb(32, 28, 46);  /* Color de la letra */
+    padding: 15px 25px; /* Medida de ancho y alto */
+    text-align: center;/* alneación del texto */
+    text-decoration: none; /* Sin ningun tipo de subrayado */
+    display: inline-block; /* propiedad que evita que un elemento se sobreponga al otro, si no que cada uno tenga su espacio */
+
+}
+.boton:hover, .boton:active{ /* Se puede seleccionar el elemento por su clase, tambien dos estados del elemento al tiempo se le pueden asignar los mismos parametros */
+    background-color: rgb(95, 76, 112);  /* Color de fondo del recuadro */
+    color: aliceblue;  /* Color de la letra */
+    padding: 15px 25px; /* Medida de ancho y alto */
+    text-align: center;/* alneación del texto */
+    text-decoration: none; /* Sin ningun tipo de subrayado */
+    display: inline-block; /* propiedad que evita que un elemento se sobreponga al otro, si no que cada uno tenga su espacio */
+}
+
+

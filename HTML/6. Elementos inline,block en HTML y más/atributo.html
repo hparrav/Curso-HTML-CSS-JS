@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo class en HTML</title>
+    <link rel="stylesheet" href="/HTML/6. Elementos inline,block en HTML y más/css/estilos.css">
+</head>
+<body>
+    <div id="Fundamentos" class="bloque">
+        <h3>Fundamentos</h3>
+        <p>Se estudía los lunes y viernes</p>
+    </div>
+    <h1 id="titulo_principal">Lengujes de programación</h1> <!-- El ID es unico y a diferencia de la clase, este debe asignarse una sola vez a un elemento en especifico -->
+
+    <div class="bloque"> <!-- Al tener el atributo class, esta división toma el estilo que se le definio al .bloque en css -->
+        <h3>JavaScript</h3>
+        <p>Se estudía los marte y jueves</p>
+    </div>
+    <div class="bloque">
+        <h3>Python</h3>
+        <p>Se estudía los lunes y viernes</p>
+    </div>|
+    <div class="bloque">
+        <h3>C</h3>
+        <p>Se estudía los Martes y viernes</p>
+    </div>
+    <div class="bloque">
+        <h3>C#</h3>
+        <p>Se estudía los Domingos</p>
+    </div>
+    <div class="bloque">
+        <h3>Java</h3>
+        <p>Se estudía los Miercoles</p>
+    </div>
+    <div>
+        <h3>Java</h3> <!-- Al no tener el atributo de clase, el estilo no aplica a esta división -->
+        <p>Se estudía los sábados</p>
+    </div>
+    <br/>
+
+    <a id="fun" href="#Fundamentos">Fundamentos</a><!-- Esto es un Marcador(Bookmark), el cual nos lleva al elemento que contenga el id que se le relaciona -->
+
+
+    <br/><br/><br/><br/><br/><br/>
+    <a href="/6. Elementos inline,block en HTML y más/index.html">Inicio</a>
+</body>
+</html>

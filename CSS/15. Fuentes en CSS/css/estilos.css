@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia&family=Roboto&effect=anaglyph&display=swap'); /* importamos un estilo de google fonts y se le agrega un ampersand con la linea del efecto quer tambien vamos a importar*/
+
+h1{
+    color: #ef476f;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #ced4da;
+    font-family: 'Sofia', cursive;/* usamos la fuente que estamos importando */
+    font-size: 60px;
+}
+.caja{
+    padding: 5px;
+    width: 40%;
+    height: 200px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin: 10px;  
+    font-size: 20px;
+    float: left;
+}
+.caja.serif{
+    background-color: #5a189a;    
+}
+.fuente-times{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter; /* el grueso de las letras es menor */
+    font-variant: small-caps; /* La primera letra de cada palabra es un poco mas grande */
+
+    /* para colocar todos los atributos en una sola lineaa se debe respetar el siguiente orde
+    font: font-style font-variant font-weight font-size/line-heigth font-family;
+    */
+}
+.fuente-georgia{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;/* tiene un estilo negrita */
+    font-size: smaller;/* hace la fuente muy pequeña */
+}
+.caja.sans-serif{
+    background-color: #00b4d8;
+}
+.fuente_arial{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: xx-large;/* fuente muy grande */
+}
+.fuente_verdana{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vw;/* la v es de viewport, y este tamaño es responsivo y se acomoda a la pantalla, ya sea del alto o el ancho, todo depende si se compaña con una h(height) o de una w(weight) */
+    /* el 3 significa el 3% de nuiestra panatalla */
+}
+.caja.monospace{
+    background-color: #f15bb5;
+}
+.fuente_courier{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px; /* el valor estandar de los navegadores es de 16px, por lo que esta funete esta un poco mas grande de lo normal */
+}
+.caja.cursive{
+    background-color: #ff8500;
+}
+.fuente_lucida{
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 1em;/* es el equivalente a 16 pixeles */
+    
+}
+br{
+    clear: both; /* con esta propiedad limpiamos los float y hacemos que el siguiente elemento siga en el flujo normal y que no aparezca a un costado*/
+}
+a:visited, a:link{      
+    border: 1px solid black;  
+    background: white;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid black;  
+    border-radius: 5px;
+    text-decoration: none;
+}
+a:hover, a:active{      
+    border: 1px solid black;  
+    background: rgba(0, 116, 184, 0.979);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 13px;
+    border: 1px solid black;  
+    border-radius: 5px;
+    text-decoration: none;
+}

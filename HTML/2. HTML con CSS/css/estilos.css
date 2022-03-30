@@ -1,0 +1,28 @@
+p{ /* Se pueden agregar estilos a los elementos del HTML, de la siguiente manera (Los estilos se aplican a todos los elementos del mismo tipo)*/
+    background-color: rgb(161, 240, 227);
+}
+h2{
+    color: aqua;
+    background-color: darkolivegreen;
+    padding: 15px; /* margen interno del elemento */
+    border: chocolate;/* borde del elemento */
+    margin: 50px;/* margen externo del elemento*/
+}
+h3{
+    color: aqua;
+    background-color: darkolivegreen;
+    padding: 40px 10px 20px 15px; /* Se pueden indicar los parametros individualmente en una sola linea tomando los valores en el siguiente orden 1.top 2.rigth 3.bottom 4.left */
+    border: chocolate;
+    margin-top: 40px; /* Los valores se pueden indicar individualmente */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+h4{
+    color: aqua;
+    background-color: darkolivegreen;
+    border: chocolate;
+    padding: 40px;
+    margin: auto 100px; /* auto para centrar los elementos, de manera horizontal*/
+    text-align: center; /* Para centrar el texto */
+}

@@ -1,0 +1,89 @@
+body{
+    height: 2200px;
+}
+h2{
+    text-align: center;
+    color: firebrick;
+    font-size: 40px;
+}  
+.primero1{
+    width: 50%; /* una ventaja de usar el porcentaje en vez de medidas, es que el elemento se ajusta automaticamente a medida que la pantalla se hace mas pequeña */
+    /* tambien se utiliza la proíedad max-width, la cual da un valor maximo al elemento, el comienza a ajustar automaticamente cuantdo la pantalla se hace mas pequeña de esa medida o porcentaje */
+    border: 3px solid firebrick;
+    margin: auto;/* al colocar el valor de auto a la propiedad de margin, centramos el elemento, ya que toma el mismo margen tanto del lado derecho como del lado izquierdo */
+}
+.primero2{
+    max-width: 800px; /* se mantendra del tamaño definido hasta que el ancho de la pantalla se lo permita, cuando el tamaño del pantalla es meno, entonces el elemento se ajusta automaticamente */
+    border: 3px solid firebrick;
+    margin: auto;/* al colocar el valor de auto a la propiedad de margin, centramos el elemento, ya que toma el mismo margen tanto del lado derecho como del lado izquierdo */
+}
+.static{
+    position: static;/* es el valor que vien por defecto, no hay necesidad de referenciarlo como en este ejemplo, este valor de static no permite modificar la posicion de los lado del elemenento (top,right, botton, left)*/
+    max-width:70%; 
+    border: 3px solid firebrick;
+    margin: auto;
+}
+.sticky{
+    position: sticky;/* cuando esta en pantalla se muestra como un relativo, pero cuando sale de pantalla con el uso del scroll entonces se comporta de manera fija(fixed) */
+    top: 15px; /* cuando sale de pantalla, entonces pa posición que toma el div es de una distancia del top de 15px */
+    position: -webkit-sticky;/* Es una corrección que se usa para que funcione bien en safari */
+    max-width:70%; 
+    border: 3px solid firebrick;
+}
+.relativa{
+    position: relative;/* con el valor de relativo, podemos indicarle una posición para que se mueva el elemento, esto con la ayuda de (top,right, botom, left) */
+    bottom: 50px; /* 50px mas despegado del bottom */
+    left: 80px; /* 80px mas despegado del left */
+    max-width:70%; 
+    border: 3px solid firebrick;
+    margin: auto;
+}
+.fixed{
+    position: fixed; /* La posición de tipo fixed o ajustada, permite que el elemento se ajuste de manera relativa al viewport(pantalla disponible en nuestra página), de acuerdo a las medidas que le demos con el (top,right, botom, left) */
+    bottom: 400px; 
+    left: 80px;
+    max-width:70%; 
+    border: 3px solid firebrick;
+}
+.padre{/* el padre donde se va a agregar el div con posición absoluta, debe ir con posición relativa, en este caso ese atributo se puso desde el HTML */
+    border: 1px solid blue;
+    max-width: 600px;
+    height: 200px;
+}
+.absoluta{
+    position: absolute; /* con el uso del posicionamiento absoluto, podemos ubicar un elemento en un punto fijo dentro del espacio(body) que se desee, su uso es constante para un elemento dentro de un div, ya que si no se hace así tomara como su elemento padre al body */
+    bottom: 10px; 
+    right: 10px;
+    max-width:70%; 
+    border: 3px solid firebrick;
+}
+
+.ZinStatic{
+    position: static;
+    top: 10px;
+    max-width: 800px;
+    padding: 15px;
+    border: 3px solid greenyellow;
+    background: lavender;
+}
+.ZinRelative{
+    position: relative ;
+    left: 20px;
+    bottom: 15px;
+    max-width: 800px;
+    padding: 15px;
+    border: 3px solid rgb(45, 70, 8);
+    background: rgb(159, 159, 233);
+    z-index: -1;/* muestra el elemento detras de los otros elementos por ser negativo */
+}
+.ZinAbsolute{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    border: 3px solid rgb(32, 48, 66);
+    background: rgb(221, 235, 102);
+    z-index: 5;
+    
+    
+}

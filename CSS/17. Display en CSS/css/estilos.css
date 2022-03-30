@@ -1,0 +1,19 @@
+h1, div, p, li {
+    border: 3px solid blueviolet;
+    color: cornflowerblue;
+    padding: 10px;
+    display: inline; /* se pueden agregar varias propiedades, pero por default estos elementos son de tipo block */ 
+    /* para este ejemplo cambiaremos su configuración por default de block a inline */
+}
+a,span{
+    border: 3px solid blueviolet;
+    color: cornflowerblue;
+    padding: 10px;
+    display: block;/* estos elementos po default son de tipo inline, pero se configuran en este ejercicio como de tipo block */
+}
+h3{
+    display: none; /* se oculta el elemento y tambien el espacio que ocupa */
+}
+h4{
+    visibility: hidden; /* se oculta el elemento , pero se mantiene el espacio que ocupa */
+}

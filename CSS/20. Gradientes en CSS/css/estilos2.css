@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+    text-shadow: 2px 2px 5px grey; /* 1.movimiento en eje x(+-) - 2.movimiento en eje y(+-) - 3.Blur o difuminado - 4.color del texto */
+}
+div.contenedor{
+    max-width: 30%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 0px 2px grey;/* Propiedad para modificar la sombra de los elementos con CSS */
+    /* 1.movimiento en eje x(+-) - 2.movimiento en eje y(+-) - 3.Blur o difuminado - 4. Hacer mas grande la sombra - 5.color del texto */
+    border-radius: 15px;
+}
+

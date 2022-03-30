@@ -1,0 +1,40 @@
+body{
+    height: 1300px;
+}
+h1{
+    font-size: 80px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+div.contenedor{
+    position: relative;
+    border: 3px dashed rgb(155, 241, 26);
+    width: 20%;
+    margin: auto;
+}
+img.imagen{
+    width: 100%;
+    opacity: .2;
+}
+div.texto{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 3px solid black;
+}
+div.over{
+    border: 3px dashed green;
+    width: 30%;
+    height: 50px; /* para que se de el overflow, el div siempre debe tener un valor de altura que lo limite, ya que por lo contrario el se adapata al tamaño del texto */
+    margin: auto;
+    overflow: auto;/* por defecto el overflor tiene el valor de visible, lo que permite que el texto se desborde del div */
+    /* Pero con el valor de hidden el texto que desborda el div, se oculta, mostando así solo la parte de texto que esta dentro del div */
+    /* con el valor de scroll, en el div apareceran obligatoriamente dos scroll, uno para el eje x y otro para el eje y, así el texto no se desborde*/
+    /* con la propiedad auto, los scroll apareceran solo ene el caso de ser necesarios, ya que si el texto no desborda el div, entonces no los mostrara */
+    /* se puede aplicar el over flor para solo un eje (overflow-x) y (overflow-x) */
+}
+

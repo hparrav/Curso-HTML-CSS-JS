@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id='titulo' onmouseover="rojo(this)" onmouseout="azul(this)" >Manejo DOM con JavaScript</h1> 
+    <!-- onmouseover nos permite llamar una función cuando el mouse pasa por encima del titulo -->
+    <!-- onmouseout nos permite llamar una función cuando el mouse se quita del titulo -->
+    <br/>
+
+    <h2 id='titulo22' onmousedown="rojox(this)" onmouseup="azulx(this)" >Manejo DOM con JavaScript</h1> 
+    <!-- onmousedown nos permite llamar una función cuando damos click en el h2 "titulo22" -->
+    <!-- onmouseup nos permite llamar una función cuando soltamos el click sobre el h2 "titulo22" -->
+    <br/>
+
+    <h2 id='titulo33' onclick="verde(this)">Manejo DOM con JavaScript</h1> 
+        <!-- onclick llama la función al momento de dar click sobre el elemento "titulo"-->
+      
+    <br/><br/><br/>
+
+    Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+    <br/><br/>
+    Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+ 
+    <script>
+        //Funciones llamadas por onmouseover y onmouseout
+
+        function rojo(tituloh1){ //Esta función es llamada al momento de pasar el mouse por el titulo h1
+            tituloh1.style.color = "red";
+        }
+
+        function azul(tituloh1){ //Esta función es llamada al momento de quitar el mouse del titulo h1
+            tituloh1.style.color = "blue";
+        }
+
+        //Funciones llamadas por onmousedown, onmouseup y onmouseclick
+
+        function rojox(tituloh22){ //Esta función es llamada al momento de dar click en el "titulo22" h2
+            titulo22.style.color = "red";
+        }
+
+        function azulx(tituloh22){ //Esta función es llamada al momento de soltar el click sobre el elemento h2 "titulo22"
+            titulo22.style.color = "blue";
+        }
+
+        async function verde(tituloh){ //Esta función es llamada al momento de dar click colo el titul h2 "titulo33"
+            setTimeout(() => tituloh.style.color = "green", 4000);
+        }
+
+        //Como parte del aprendizaje, esta ultima función la converti en una función asincrona y programe una función setTimeOut 
+        // para que se ejecuta el cambio de color a los 4 segundos de darle click al titulo
+
+
+        //Funciones llamadas por onfocus y onblur
+        function cambiar(elementoImput){ //onfocus llama a esta función, en el momento que nos estemos enfocando o seleccionando el campo de imput de texto
+            elementoImput.style.background = "yellow";
+        }
+
+        function regresar(elementoImput){
+            elementoImput.style.background = "white"; //onblur llama a esta función una vez ya no estemos enfocados o seleccionando el campo de imput de texto
+        }
+
+
+</script>
+</body>
+</html>

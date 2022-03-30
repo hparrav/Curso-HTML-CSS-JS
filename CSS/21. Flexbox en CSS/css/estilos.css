@@ -1,0 +1,39 @@
+h1{
+    text-align: center;
+    text-shadow: 2px 2px 2px #a8dadc;
+    color: rgb(231, 62, 62);
+}
+
+div.contenedor{
+    display: flex;/* Flexbox se aplica dandole el valor de flex a la propiedad display (Por default los elementos se cargan hacia la izquierda) */
+    background-color: rgb(65, 40, 231);
+    /* flex-direction: colum-reverse; (Sirve para darle orientación de columna haciendo(se puede utilizar el colum y para invertir el orden el column-reverse))*/
+    flex-direction: row;/* por defecto cuando se emplea el flex, el flex direction esta en row, tambien se puede invertir el orden con row-reverse */
+    flex-wrap: wrap;/* este atributo permite que cuantdo el tamaño de la pantalla se reuce, los elementos pasan a la siguientente fila y se acomodan para que se puedan visualizar */
+    /* flex-flow: row wrap; (con este atributo podemos mezclar los dos atribuos anteriores en uno solo) */
+ 
+}
+div.contenedor > p{/* Selector combinado para tomar los elementos p hijos que esten dentro del div con clase contenedor */
+    background-color: #4895ef;
+    color: #f1faee;
+    margin: 20px;
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+div.contenedor2{
+    display: flex;
+    background-color: rgb(65, 40, 231);
+    flex-flow: row wrap;
+    justify-content: center; /* Con esta propiedad podemos posicionar los elementos dentro del div (start,center,end,space-between, space-around, space-evenly) */
+    height: 300px;/* si cambiamos la altura del contendeor, entonces los elementos internos tambien creceran, esto se puede evitar posicionando los elementos de manera horizontal */
+    align-items: center;  /* evita que los elementos crezcan con el contenedor y los posiciona de acuerdo al valor que se le indique (strech()default,start,center,baseline(se alinean con el tecto, si una de las cajas es mas grande, este se alinea con el texto)) */
+    align-content: flex-start; /* da caracteristicas a todos los elementos dentro del div(center,flex-end,flex-between, space-around, space-between) */
+}
+div.contenedor2 > p{
+    background-color: #4895ef;
+    color: #f1faee;
+    margin: 20px;
+    padding: 15px;
+    font-size: 1.5em;
+}

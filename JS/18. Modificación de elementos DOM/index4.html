@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cambio de atributos en HTML</title>
+</head>
+<body>
+    <h1 id="titulo">Manejo de DOM con JavaScript</h1>
+    <p id="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. At molestias est quae porro laudantium accusantium ipsum, placeat ducimus illum adipisci? Ducimus ullam nam cupiditate non eligendi maxime assumenda tempore quidem.</p>
+    <br/>
+    <button onclick="CambioEstilos()">Cambio del color de texto</button>
+    <br/><br/>
+    <img id="imagen" src="/CSS/19. Selectores en CSS/img/CSS.png" alt="imagen prueba" title="CSS LOGO">
+    <br/>
+    <button onclick="cambioDeScr()">Cambio de imagen</button>
+    <br/><br/>
+    
+    <script>
+        //Modificar los atributos de una etiqueta
+        function cambioDeScr(){
+            //utilizamos el metodo .src de el getElementById, con la finalidad de cambiar la ruta de la imagen, la acción la activamos a traves de un boton
+            document.getElementById("imagen").src = "/CSS/20. Gradientes en CSS/img/Logo HTML.png";
+            document.getElementById("imagen").title = "HTML LOGO"; //Lo mismo se puede hacer con otros atributos de la etiqueta <img>
+        }
+
+        //Modificar los estilos de una etiqueta por id
+        function CambioEstilos(){
+            //utilizamos el metodo .style para modificar el estilo de los valores en las etiquetas
+            document.getElementById("titulo").style.color = "blue"; //Cambio del color de texto en titulo
+            document.getElementById("parrafo").style.color = "blue"; //Cambio del color de texto del parrafo
+        } 
+
+
+
+    </script>
+   
+</body>
+</html>
